@@ -108,7 +108,6 @@ var unifiedServer = function(req,res){
 var router = {
     'ping': handlers.ping,
     'users': handlers.users,
-    'sampleUpdate': handlers.sampleUpdate,
-    'sampleWrite': handlers.sampleWrite
-
+    'tokens': handlers.tokens,
+    'checks' : handlers.checks
 };
