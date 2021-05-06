@@ -11,6 +11,7 @@ const config = require('./lib/config');
 const fs = require('fs');
 const handlers = require('./lib/handlers');
 const helpers = require('./lib/helpers');
+const EventsEmitter = require('events');
 
 // instantiate http server
 var httpServer = http.createServer((req,res) => {
