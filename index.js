@@ -11,7 +11,7 @@ const config = require('./lib/config');
 const fs = require('fs');
 const handlers = require('./lib/handlers');
 const helpers = require('./lib/helpers');
-const EventsEmitter = require('events');
+
 
 // instantiate http server
 var httpServer = http.createServer((req,res) => {
@@ -30,7 +30,7 @@ var httpsServerOptions = {
     'cert': fs.readFileSync('./https/cert.pem')
 };
 
-var httpsServer = http.createServer(httpsServerOptions,(req,res) => {
+var httpsServer = https.createServer(httpsServerOptions,(req,res) => {
     unifiedServer(req,res);
 
 });
